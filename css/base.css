@@ -1,0 +1,416 @@
+@charset "utf-8"
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Variaveis de cor  */
+:root{
+    --bg-main-color: #D9CBBF ;
+    --bg-secundary-color: #593B20;
+    --bg-secundary-color-rgba: rgba(89,59,32,.5) ;
+    --color: #593b20;
+    --color-secundary: #D9CBBF;
+    --support-color: #D9B779;
+    --support-color-rgba: rgba(217,183,121,.8);
+}
+/* Configurações gerais  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    list-style-type: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--color-secundary);
+    background-color: var(--bg-main-color);
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 6rem;
+}
+/* Fundo da seção 1 */
+.background{
+    height: 100vh;
+    background-image: linear-gradient(rgba(64,57,54,1),rgba(89,59,42,0.8), rgba(89,59,42,0.4)), url(../img/case-museu-do-ipiranga-principal1.png);
+    background-position: 50% 50%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Cabeçalho */
+header{
+    padding: 1.5rem 5rem;
+    display: flex;
+    max-width: 100%;
+    /* background-color: var(--bg-secundary-color); */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    cursor: pointer;
+    width: 80px;
+    height: auto;
+    margin: 0rem 4rem;
+}
+
+ul{
+    display: flex;
+}
+
+ul li{
+    padding: 1.5rem;
+    transform: 2ms ease-in; 
+    position: relative;
+    cursor:pointer;
+}
+
+/* Cabeçalho - underline hover */
+
+ul li:before{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 1px;
+    background-color: #D9CBBF;
+    transition: all 1.5s ease;
+}
+
+header ul li:hover:before{
+    width:  100%;
+}
+
+
+/* Conteudo seção 1  - Titulo*/
+.main-content{
+    height: 41.5vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.btn{
+    width: 300px;
+    height: 80px;
+    border: none;
+    border-radius: 4%;
+    background-color: var(--support-color);
+    cursor: pointer;
+    box-shadow: 10px 10px 60px 10px, rgba(89,59,42,0.4);
+}
+
+/* Hover do botão  */
+.btn:hover{
+    background-color: var(--bg-secundary-color);
+    color:var(--color-secundary);
+    transition:.4s ease-out;
+    transform: scale(1.3);
+}
+
+
+/* Conteudo seção 2 - informacoes */
+.informacoes{
+    padding: 50px 32px;
+    height: 60vh;
+    display: flex;
+    color: var(--color);
+}
+
+#arquitetura{
+    margin-left: -5%;
+}
+
+.informacoes-content{
+    padding: 0px 0px 0px 150px;
+    width: 50vw;
+    text-align: justify;
+}
+
+.informacoes-content h2{
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.informacoes-content p{
+    margin-top: 100px;
+}
+
+
+/* Conteudo seção 3 - Destaques */
+.destaques{
+    padding: 2rem 5rem;
+    height: 60vh;
+    /* background-color: var(--support-color); */
+    color: var(--color);
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    margin: 10px;
+    width: 500px;   
+    border-radius: 4px;
+    background-color: var(--bg-secundary-color-rgba);
+    color: var(--color-secundary);
+}
+.card .card-img {
+    height: 300px;
+}
+
+.card .card-img img{
+    width: 400px;
+    height: 100%;
+}
+
+.card-content{
+    padding: 10px;
+    font-size: 16px;
+    height: 60px;
+}
+
+.card:hover{
+    background-color: #593B20;
+    transition:.4s ease-out;
+    transform: scale(1.3);
+
+}
+
+
+/* Conteudo 4 - Acervo  */
+.acervo {
+    padding: 2rem 8rem;
+    width: 100vw;
+    background-color: var(--support-color);
+    color: var(--color);
+}
+.acervo-content{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.veja-mais{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+.veja-mais:hover{
+    cursor: pointer;
+}
+.acervo-obras{
+    max-width: 60vw;
+    height: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 3(1fr);
+    grid-auto-rows: min-content;
+    grid-auto-flow: dense;
+}
+
+.coluna:nth-child(1){
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column; 
+}   
+.coluna:nth-child(2){
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna:nth-child(3){
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+}
+.obra{
+    max-width: 500px;
+    cursor: pointer;
+}
+.obra-content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--bg-secundary-color-rgba);
+    color: var(--color-secundary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: .6s;
+}
+
+.obra-content:hover{
+    opacity: 1;
+}
+
+.obra{
+    width: 800px;
+    position: relative;
+}
+
+.obra img{
+    width: 100%;
+    display:block;
+    margin: auto;
+}
+
+/* Conteudo 5 - Endereço  */
+.endereco{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    /* background-color: black; */
+    color: #593B20;
+}
+#mapa{
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+}
+
+/* Conteudo 6 - Parceiros  */
+
+.parceiros{
+    margin: 3rem 10rem;
+    height: 110vh;
+    color: var(--color);
+    justify-content: center;
+}
+
+.patrocinio{
+    margin: 4rem 0rem 4rem 0rem;
+    width: 80vw;
+    display: block;
+}
+
+.parceiros h2{
+    text-align: center;
+}
+.linha1{
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+.linha2{
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+.linha3{
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+.linha4{
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+.linha5{
+    margin: 2rem 0rem 3rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+.linha6{
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+.linha7{
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+/* Footer  */
+footer{
+    height: 80vh;
+    background-color: var(--bg-secundary-color);
+}
+.footer-content{
+    padding: 2rem 5rem;
+    display: block;
+}
+
+.museu{
+    margin: 0rem 15rem;
+    display: flex;
+    justify-content:space-between;  
+    align-items: center;
+    text-align: justify;
+}
+.topico1-footer-content{
+    margin: 0rem 18rem 0rem 28rem;
+}
+.museu2{
+    margin: 2rem 15rem;
+    display: flex;
+    justify-content: space-between;
+}
+.museu2 li{
+    padding: 0;
+}
+.topico3-footer-content ul{
+    display:flex;
+    flex-direction: column;
+}
+.topico4-footer-content ul{
+    display:flex;
+    flex-direction: column;
+}
+
+.topico5-footer-content ul{
+    display:flex;
+    flex-direction: column;
+}
+.footer-logo > img{
+    width: 120px;
+}
+
+.redes-sociais{
+    height: 90px;
+    margin: 0rem 40rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.redes-sociais > img{
+    width: 40px;
+}
+
+.redes-sociais > img:nth-child(1){
+    width: 30px;
+}
